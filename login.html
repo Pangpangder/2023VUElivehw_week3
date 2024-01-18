@@ -19,14 +19,14 @@
             請先登入
           </h1>
           <div class="col-8">
-            <form id="form" class="form-signin">
+            <form id="form" class="form-signin" v-on:submit.prevent="login">
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="username"
+                <input type="email" v-model="userInfo.username" class="form-control" id="username"
                   placeholder="name@example.com" required autofocus>
                 <label for="username">Email address</label>
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control" id="password"
+                <input type="password" v-model="userInfo.password" class="form-control" id="password"
                   placeholder="Password" required>
                 <label for="password">Password</label>
               </div>
